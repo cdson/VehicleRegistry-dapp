@@ -1,0 +1,131 @@
+.check{
+  width: 10px;
+}
+.close{
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-top: 3px;
+  margin-right: 8px;
+}
+
+#sport, #teams_registry{
+  width: 173px;
+}
+
+.how-it-works-images{
+  width: 60px;
+  text-align: center;
+}
+.how-it-works{
+  text-align: center;
+}
+
+.main-header{
+  background: url(../images/main.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+#hidden-when-logged{
+  display: none;
+}
+.private{
+  display: none;
+}
+
+/* message alert */
+.messageAlert{
+  float: left;
+  padding-right: 10px;
+}
+.messageAlertContainer{
+  position: absolute;
+  width: 30%;
+  z-index: 1000;
+  margin: auto;
+  left: 50%;
+  margin-left: -15%;
+  display: none;
+}
+.messageAlertContainerShow{
+  position: absolute;
+  width: 30%;
+  z-index: 1000;
+  margin: auto;
+  left: 50%;
+  margin-left: -15%;
+  
+}
+/* navbar */
+.navbar-logo{
+  height: 100%;
+}
+.navbar-default{
+  background-color: #F7F8FF;
+}
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover{
+  color: gainsboro;
+}
+.navbar-default .navbar-nav>li>a{
+  color: black;
+}
+.form-control{
+  margin-bottom: 10px;
+}
+.navbar-brand{
+  padding: 0px;
+}
+
+.navbar{
+  margin-bottom: 0px;
+}
+
+label {
+  display: inline-block;
+  width: 100px;
+}
+
+input {
+  width: 500px;
+  padding: 5px;
+  font-size: 16px;
+}
+
+button {
+  font-size: 16px;
+  padding: 5px;
+}
+
+h1, h2 {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: #AAA;
+  font-size: 32px;
+}
+
+h3 {
+  font-weight: normal;
+  color: #AAA;
+  font-size: 24px;
+}
+
+.black {
+  color: black;
+}
+
+#balance {
+  color: black;
+}
+
+.hint {
+  color: #666;
+}

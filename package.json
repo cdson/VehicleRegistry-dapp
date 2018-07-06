@@ -1,0 +1,19 @@
+{
+  "name": "vehicleregistry",
+  "version": "1.0.0",
+  "main": "truffle.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "dev": "lite-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "truffle": "^4.1.13",
+    "truffle-contract": "^3.0.6"
+  },
+  "description": ""
+}

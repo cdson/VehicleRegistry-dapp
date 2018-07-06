@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>VehicleRegistry</title>
+  
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+  <link href="stylesheets/app.css" rel='stylesheet' type='text/css'>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+  <script src="web3.min.js"></script>
+  <script src="truffle-contract.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html"><img class="navbar-logo" src="/images/logo.png"></a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="private"><a href="registry.html">My Vehicles<span class="sr-only">(current)</span></a></li>
+          <li class="active private"><a href="vehicle_registration.html">Add Vehicle</a></li>
+          <li><a href="registered_vehicles.html">Registered Vehicles</a></li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li id="hidden-when-logged"><a href="login.html">Login</a></li>
+          <li class="private"><a href="index.html" onclick="logout();" >Logout</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+     
+  </nav>
+    
+  <div class="messageAlertContainer alert alert-danger">
+    <div class="messageAlert"></div>
+    <div  class="close" onclick="closeAlert();">&times;</div>
+  </div>
+
+  <div class="container">
+    <br>
+      <div class="row">
+          <div class="col-md-4">
+              <h4>Register Vehicle</h4>
+              <div id="msg"></div>
+              <select class="form-control" id="make" style="margin-bottom: 10px" name="sport">
+                  <option selected>Select make...</option>
+                  <option value="ACURA">ACURA</option>
+                  <option value="ASTON MARTIN">ASTON MARTIN</option>
+                  <option value="AUDI">AUDI</option>
+                  <option value="BENTLEY">BENTLEY</option>
+                  <option value="BMW">BMW</option>
+                  <option value="BUICK">BUICK</option>
+                  <option value="CADILLAC">CADILLAC</option>
+                  <option value="CHEVROLET">CHEVROLET</option>
+                  <option value="CHRYSLER">CHRYSLER</option>
+                  <option value="DODGE">DODGE</option>
+                  <option value="FERRARI">FERRARI</option>
+                  <option value="FORD">FORD</option>
+                  <option value="GMC">GMC</option>
+                  <option value="HONDA">HONDA</option>
+                  <option value="HUMMER">HUMMER</option>
+                  <option value="HYUNDAI">HYUNDAI</option>
+                  <option value="INFINITI">INFINITI</option>
+                  <option value="ISUZU">ISUZU</option>
+                  <option value="JAGUAR">JAGUAR</option>
+                  <option value="JEEP">JEEP</option>
+                  <option value="KIA">KIA</option>
+                  <option value="LAMBORGHINI">LAMBORGHINI</option>
+                  <option value="LAND ROVER">LAND ROVER</option>
+                  <option value="LEXUS">LEXUS</option>
+                  <option value="LINCOLN">LINCOLN</option>
+                  <option value="LOTUS">LOTUS</option>
+                  <option value="MASERATI">MASERATI</option>
+                  <option value="MAYBACH">MAYBACH</option>
+                  <option value="MAZDA">MAZDA</option>
+                  <option value="MERCEDES-BENZ">MERCEDES-BENZ</option>
+                  <option value="MERCURY">MERCURY</option>
+                  <option value="MINI">MINI</option>
+                  <option value="MITSUBISHI">MITSUBISHI</option>
+                  <option value="NISSAN">NISSAN</option>
+                  <option value="PONTIAC">PONTIAC</option>
+                  <option value="PORSCHE">PORSCHE</option>
+                  <option value="ROLLS-ROYCE">ROLLS-ROYCE</option>
+                  <option value="SAAB">SAAB</option>
+                  <option value="SATURN">SATURN</option>
+                  <option value="SUBARU">SUBARU</option>
+                  <option value="SUZUKI">SUZUKI</option>
+                  <option value="TOYOTA">TOYOTA</option>
+                  <option value="VOLKSWAGEN">VOLKSWAGEN</option>
+                  <option value="VOLVO">VOLVO</option>
+              </select>
+
+              <input class="form-control" type="text" id="model" placeholder="Vehicle model">
+              <input class="form-control" type="text" id="year" placeholder="Vehicle Year">
+              <input class="form-control" type="text" id="color" placeholder="Vehicle Color">
+              <input class="form-control" type="text" id="licensePlate" placeholder="Vehicle Licence Plate">
+              <input class="form-control" type="text" id="VIN" placeholder="Vehicle Identification Number">
+
+
+              <br>
+              <br>
+              <a href="#"  class="btn btn-primary" onclick="App.RegisterVehicle();">Register</a>
+          </div>
+      </div>
+
+      </div>
+
+</body>
+
+</html>
+
